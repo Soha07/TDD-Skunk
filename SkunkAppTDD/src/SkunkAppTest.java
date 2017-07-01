@@ -1,32 +1,50 @@
 import static org.junit.Assert.*;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class SkunkAppTest {
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
+	private SkunkApp game;
+	
 	@Before
-	public void setUp() throws Exception {
+	public void setUp()
+	{
+		game = new SkunkApp ();
 	}
-
-	@After
-	public void tearDown() throws Exception {
+	
+	@Test
+	public void testGetPlayerInfo() {
+		game.getPlayerInfo();
+		assertEquals(2, game.getNumberOfPlayers());
+		assertEquals("Player 1", game.getPlayers(1));
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void canCreateRoll() {
+		Roll roll = new Roll ();
+		asertTrue(roll.getLastTotal()<=12);
+		asertTrue(roll.getLastTotal()>=2);
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	private void asertTrue(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
 }
