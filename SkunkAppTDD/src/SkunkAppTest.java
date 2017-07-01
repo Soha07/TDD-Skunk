@@ -23,28 +23,12 @@ public class SkunkAppTest {
 	@Test
 	public void canCreateRoll() {
 		Roll roll = new Roll ();
-		asertTrue(roll.getLastTotal()<=12);
-		asertTrue(roll.getLastTotal()>=2);
+		assertTrue(roll.getLastTotal()<=12);
+		assertTrue(roll.getLastTotal()>=2);
 	}
 
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	private void asertTrue(boolean b) {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	
 }
