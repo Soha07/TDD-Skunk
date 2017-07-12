@@ -1,19 +1,12 @@
 
 public class Roll {
 
-	private int lastTotal;
-	
-	public Roll()
+	private Roll die1;
+	private Roll die2;
+
+	public Roll(Roll die1, Roll die2)
 	{
-		lastTotal = rollDie() + rollDie();
+		this.die1=die1;
+		this.die2=die2;
 	}
-
-	private int rollDie() {
-		return (int) Math.random()*6 +1;
-	}
-
-	public int getLastTotal() {
-		return lastTotal;
-	}
-
 }

@@ -1,6 +1,6 @@
 
 public class SkunkApp {
-	
+
 	private int numberOfPlayers ;
     private String[] playerName;
 	
