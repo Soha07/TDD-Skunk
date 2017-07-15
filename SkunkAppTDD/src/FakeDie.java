@@ -12,6 +12,7 @@ public class FakeDie {
 	
 	public FakeDie(int[] is) {
 		// TODO Auto-generated constructor stub
+		
 	}
 
 
