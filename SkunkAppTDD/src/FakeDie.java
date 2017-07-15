@@ -12,10 +12,31 @@ public class FakeDie {
 	
 	public FakeDie(int[] is) {
 		// TODO Auto-generated constructor stub
-		
+		fakeRolls = new ArrayList<Integer>();
+		for (int i : is)
+			fakeRolls.add(i);
+		if (is.length==0)
+			fakeRolls.add(1);
 	}
 
 
+	public void roll()
+	{
+		indexOfNextValue++;
+		
+		if (indexOfNextValue >= fakeRolls.size())
+		{
+			indexOfNextValue = 0;
+		}
+
+	}
+	
+	public int getLastRoll()
+	{
+		return fakeRolls.get(indexOfNextValue);
+		
+	}
+	
 	public ArrayList<Integer> getFakeRolls() {
 		return fakeRolls;
 	}

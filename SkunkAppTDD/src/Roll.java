@@ -10,7 +10,13 @@ public class Roll {
 		this.setDie1(fake1);
 		this.setDie2(fake2);
 	}
-
+	public Roll(){
+		lastTotal = rollDie() + rollDie();
+	}
+	private int rollDie() {
+		// TODO Auto-generated method stub
+		return  (int) Math.random()*6 + 1;
+	}
 	public int getLastTotal(){
 		return lastTotal;
 		
